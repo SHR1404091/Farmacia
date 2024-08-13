@@ -38,13 +38,13 @@ $countLowStock2 = $lowStockQuery2->num_rows;
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <div class="page-wrapper">
 
-    <!--     <div class="row page-titles">
+        <div class="row page-titles">
                 <div class="col-md-12 align-self-center">
-                    <div class="float-right"><h3 style="color:black;"><p style="color:black;"><?php echo date('l') . ' ' . date('d') . '- ' . date('m') . '- ' . date('Y'); ?></p></h3>
+                    <div class="float-right"><h3 style="color:black;"><p style="color:black;"><span id="dia"></span> <span id="fecha"><?php echo date('d-m-Y'); ?></span>  <span id="hora"></span></p></h3>
                     </div>
                     </div>
                 
-            </div> -->
+            </div>
 
 
     <div class="container-fluid ">
@@ -257,6 +257,20 @@ $countLowStock2 = $lowStockQuery2->num_rows;
         var chart = new google.visualization.BarChart(document.getElementById('myChart1'));
         chart.draw(data, options);
     }
+</script>
+<script>
+    function actualizarFechaHora() {
+        const diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+        const fecha = new Date();
+        const dia = diasSemana[fecha.getDay()];
+        const hora = fecha.toLocaleTimeString();
+
+        document.getElementById('dia').textContent = dia;
+        document.getElementById('hora').textContent = hora;
+    }
+
+    setInterval(actualizarFechaHora, 1000); // Actualiza cada segundo
+    actualizarFechaHora(); // Ejecuta la función al cargar la página
 </script>
 
 
