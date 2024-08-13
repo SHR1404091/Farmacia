@@ -9,3 +9,7 @@ Este Sistema de Gestión de Farmacia en PHP MySQL con Código Fuente le permite 
 - Agregar, Listar, Editar y Eliminar Medicinas
 - Agregar, Listar, Editar, Eliminar e Imprimir Facturas
 - Listar el Reporte de Ventas, Productos y Productos Vencidos por Periodos de Tiempo
+
+ <!-- usuario : hola@configuroweb.com
+      clave : 123abcd.. 
+ -->
