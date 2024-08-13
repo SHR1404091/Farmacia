@@ -7,17 +7,6 @@
 
 <?php
 
-// Código de conexión a la base de datos
-$servername = "localhost"; 
-$username = "root";        
-$password = "";            
-$dbname = "nombre_de_la_base_de_datos";
-
-$connect = new mysqli($servername, $username, $password, $dbname);
-
-if ($connect->connect_error) {
-    die("Conexión fallida: " . $connect->connect_error);
-}
 
 $lowStockSql = "SELECT * FROM product WHERE status = 1";
 $lowStockQuery = $connect->query($lowStockSql);
