@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "farmacia";
+$dbname = "db_farmacia";
 
 
 // Create connection
